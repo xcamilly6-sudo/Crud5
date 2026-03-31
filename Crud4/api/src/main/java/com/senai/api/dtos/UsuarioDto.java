@@ -1,5 +1,6 @@
 package com.senai.api.dtos;
 
+
 public class UsuarioDto {
 
     private String cpf;
@@ -8,6 +9,13 @@ public class UsuarioDto {
     private String senha;
 
     public UsuarioDto() {
+    }
+
+    public UsuarioDto(String cpf, String nome, String login, String senha) {
+        this.cpf = cpf;
+        this.nome = nome;
+        this.login = login;
+        this.senha = senha;
     }
 
     public String getCpf() {
@@ -40,5 +48,15 @@ public class UsuarioDto {
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    @Override
+    public String toString() {
+        return "UsuarioDto{" +
+                "cpf='" + cpf + '\'' +
+                ", nomeCompleto='" + nome + '\'' +
+                ", login='" + login + '\'' +
+                ", senha='" + senha + '\'' +
+                '}';
     }
 }

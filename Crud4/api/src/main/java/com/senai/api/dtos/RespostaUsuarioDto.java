@@ -9,6 +9,12 @@ public class RespostaUsuarioDto {
     public RespostaUsuarioDto() {
     }
 
+    public RespostaUsuarioDto(String cpf, String nome, String login) {
+        this.cpf = cpf;
+        this.nome = nome;
+        this.login = login;
+    }
+
     public String getCpf() {
         return cpf;
     }
@@ -31,5 +37,14 @@ public class RespostaUsuarioDto {
 
     public void setLogin(String login) {
         this.login = login;
+    }
+
+    @Override
+    public String toString() {
+        return "RespostaUsuarioDto{" +
+                "cpf='" + cpf + '\'' +
+                ", nomeCompleto='" + nome + '\'' +
+                ", login='" + login + '\'' +
+                '}';
     }
 }
