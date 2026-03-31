@@ -1,5 +1,6 @@
 package com.senai.api.services;
 
+import com.senai.api.dtos.LoginDto;
 import com.senai.api.dtos.RespostaUsuarioDto;
 import com.senai.api.dtos.UsuarioDto;
 import com.senai.api.entities.UsuarioEntity;
@@ -85,4 +86,30 @@ public class UsuarioService {
 
         return "Erro: usuário com CPF '" + cpf + "' não encontrado.";
     }
+
+    public String login( UsuarioDto usuarioDto) {
+
+        for (UsuarioEntity u : usuarios) {
+            if (u.getLogin().equals(usuarioDto)) {
+                usuarios.isEmpty();
+                return "Autenticação bem-sucedida ";
+            }
+            return"ERRO: Login não valido!";
+
+
+        }
+        for (UsuarioEntity i : usuarios) {
+            if (i.getSenha().equals(usuarioDto)) {
+                usuarios.isEmpty();
+                return "Autenticação bem-sucedida ";
+            }
+            return "ERRO: Senha incorreta";
+        }
+        return "Autenticação bem-sucedida ";
+    }
+
+
+
+
+
 }
