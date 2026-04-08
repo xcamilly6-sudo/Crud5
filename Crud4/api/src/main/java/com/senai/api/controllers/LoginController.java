@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 //@RequestMapping
 public class LoginController {
 
-    //--injeção de dependencia
+    //injeção de dependencia
     private final UsuarioService service;
 
     public LoginController(UsuarioService service) {
@@ -20,7 +20,7 @@ public class LoginController {
     @PostMapping("/login")
     public ResponseEntity<String> login(@RequestBody LoginDto loginDto) {
 
-        //--chamar metodo do service para realizar o login
+        //-chamar metodo do service para realizar o login
         String respota;
         //respota = service.login(loginDto.getLogin());
         //String resposta = service.login(loginDto.getSenha());

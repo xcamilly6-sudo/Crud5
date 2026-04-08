@@ -16,6 +16,7 @@ public class UsuarioService {
 
     public String cadastrar(UsuarioDto usuarioDto) {
 
+
         UsuarioEntity usuario = new UsuarioEntity();
 
         usuario.setCpf(usuarioDto.getCpf());
@@ -107,6 +108,7 @@ public class UsuarioService {
         }
         return "Autenticação bem-sucedida ";
     }
+
 
 
 
